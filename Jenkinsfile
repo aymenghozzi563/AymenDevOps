@@ -46,7 +46,7 @@ pipeline {
                 }
             }
         }
-/*
+
         stage('Docker Login') {
             steps {
                 echo "Logging into Docker Hub..."
@@ -69,7 +69,7 @@ pipeline {
                 sh "docker push $DOCKER_IMAGE"
             }
         }
-
+/*
         stage('Deploy to Kubernetes') {
             steps {
                 echo "Deploying MySQL and Spring Boot app to Kubernetes..."
