@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo "Checking out code from GitHub..."
                 git branch: 'main',
-                    url: '****** repo link ******'
+                    url: 'https://github.com/aymenghozzi563/AymenDevOps.git'
             }
         }
 
@@ -31,7 +31,8 @@ pipeline {
                 sh 'mvn package -Dmaven.test.skip=true'
             }
         }
-/*
+
+        /*
         stage('SonarQube Analysis') {
             steps {
                 echo "Running SonarQube analysis..."
@@ -76,6 +77,8 @@ pipeline {
                 sh "kubectl apply -f k8s/app-deployment.yaml"
             }
         }
+        */
+
     }
 
     post {
@@ -88,5 +91,5 @@ pipeline {
         failure {
             echo "====== Pipeline execution failed ======"
         }
-    }*/
+    }
 }
