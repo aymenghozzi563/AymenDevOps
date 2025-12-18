@@ -69,7 +69,7 @@ pipeline {
                 sh "docker push $DOCKER_IMAGE"
             }
         }
-/*
+
         stage('Deploy to Kubernetes') {
             steps {
                 echo "Deploying MySQL and Spring Boot app to Kubernetes..."
@@ -77,7 +77,7 @@ pipeline {
                 sh "kubectl apply -f k8s/app-deployment.yaml"
             }
         }
-        */
+
 
     }
 
