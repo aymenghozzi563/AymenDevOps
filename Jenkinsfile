@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        DOCKER_IMAGE = "  *****username of docker hub******* /devops-project:latest"
+        DOCKER_IMAGE = "aymenghozzi/devops-project:latest"
     }
 
     stages {
