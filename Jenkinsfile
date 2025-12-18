@@ -32,11 +32,11 @@ pipeline {
             }
         }
 
-        /*
+
         stage('SonarQube Analysis') {
             steps {
                 echo "Running SonarQube analysis..."
-                withCredentials([string(credentialsId: 'sonar-access', variable: 'SONAR_TOKEN')]) {
+                withCredentials([string(credentialsId: 'sonar_token', variable: 'SONAR_TOKEN')]) {
                     sh """
                         mvn sonar:sonar \
                         -Dsonar.projectKey=DEVOPS_PROJECT \
@@ -46,7 +46,7 @@ pipeline {
                 }
             }
         }
-
+/*
         stage('Docker Login') {
             steps {
                 echo "Logging into Docker Hub..."
